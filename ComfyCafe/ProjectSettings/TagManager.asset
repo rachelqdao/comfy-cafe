@@ -7,9 +7,10 @@ TagManager:
   - Background
   - CustomerSpawner
   - TableManager
-  - CustomerScript
   - Table1
   - Path
+  - Customer
+  - Queue
   layers:
   - Default
   - TransparentFX

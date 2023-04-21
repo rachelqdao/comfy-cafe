@@ -5,8 +5,10 @@ using UnityEngine;
 public class CustomerSpawner : MonoBehaviour
 {
     public GameObject customerPrefab;
-    public float spawnRate = 0.5f;
+    public float spawnRate = 3;
     private float timer = 0;
+
+    public GameObject[] customers;
 
     // Start is called before the first frame update
     void Start()
@@ -16,12 +18,18 @@ public class CustomerSpawner : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {   
-        if (timer < spawnRate) {
-            timer = timer + Time.deltaTime;
-        } else {
-            spawnCustomer();
-            timer = 0;
+    {           
+        
+        customers = GameObject.FindGameObjectsWithTag("Customer");
+        //Debug.Log("num customers = " + customers.Length);
+
+        if (customers.Length < 11) {
+            if (timer < spawnRate) {
+                timer = timer + Time.deltaTime;
+            } else {
+                spawnCustomer();
+                timer = 0;
+            }
         }
     }
 

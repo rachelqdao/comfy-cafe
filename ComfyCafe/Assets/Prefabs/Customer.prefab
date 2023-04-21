@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8492352675559696605}
   m_Layer: 0
   m_Name: Customer
-  m_TagString: CustomerScript
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,11 +52,16 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6c5c45aee1758e24cab79321a33590ac, type: 3}
   - {fileID: 21300000, guid: c336469cc88f73c438da77b313cdcd09, type: 3}
   - {fileID: 21300000, guid: e641aa210c41e094bb196c6fb1001f18, type: 3}
+  - {fileID: 21300000, guid: 264b63835acd559498892e5b8f4817c3, type: 3}
   spriteRenderer: {fileID: 8492352675559696605}
+  speechBubble: {fileID: 21300000, guid: 73268dfb7cbaf1541b69a7953a1dc051, type: 3}
+  speechBubbleSprite: {fileID: 0}
+  timer: 0
   moveSpeed: 0.65
   tableAssignment: 0
   tableManager: {fileID: 0}
   path: []
+  tablePath: []
 --- !u!212 &8492352675559696605
 SpriteRenderer:
   m_ObjectHideFlags: 0

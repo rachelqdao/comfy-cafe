@@ -4,38 +4,54 @@ using UnityEngine;
 
 public class TableManager : MonoBehaviour
 {
-    private bool[] tableAvailability;
+    public bool[] tableAvailability;
     private int numTables = 6;
-    private int lastAvailableTable = 0;
 
-    public GameObject table1;
-    public GameObject table2;
-    public GameObject table3;
-    public GameObject table4;
-    public GameObject table5;
-    public GameObject table6;
+    public bool[] queueAvailability;
+    private int numQueue = 5;
 
     // Start is called before the first frame update
     void Start()
     {
         // All tables available on start
         tableAvailability = new bool[] {true, true, true, true, true, true};
+        queueAvailability = new bool[] {true, true, true, true, true};
 
     }
 
     public int checkTableAvailability() {
         for (int i = 0; i < numTables; i++) {
             if (tableAvailability[i] == true) {
-            
                 tableAvailability[i] = false;
-                lastAvailableTable = i;
                 return i;
             }
         }
         
-        return 0;
+        return -1;
     }
-    
 
-    // update next available table
+    public int checkQueueAvailability() {
+        for (int i = 0; i < numQueue; i++) {
+            if (queueAvailability[i] == true) {
+                queueAvailability[i] = false;
+                return i;
+            }
+        }
+
+        // Should never get here b/c only can spawn 11 customers at once
+        return -1;
+    }
+
+    public int checkQueuePositionBefore(int currentIndex) {
+        if (queueAvailability[currentIndex - 1] == true) {
+
+            queueAvailability[currentIndex - 1] = false;
+            queueAvailability[currentIndex] = true;
+            
+            return currentIndex - 1;
+        } else {
+            return currentIndex;
+        }
+    }
+
 }
