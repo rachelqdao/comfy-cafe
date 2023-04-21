@@ -5,13 +5,13 @@ using UnityEngine;
 public class CustomerSpawner : MonoBehaviour
 {
     public GameObject customerPrefab;
-    public float spawnRate = 3;
+    public float spawnRate = 5f;
     private float timer = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        Debug.Log("customer spawner position: " + transform.position);
     }
 
     // Update is called once per frame

@@ -9,6 +9,7 @@ TagManager:
   - TableManager
   - CustomerScript
   - Table1
+  - Path
   layers:
   - Default
   - TransparentFX

@@ -24,8 +24,10 @@ public class CustomerScript : MonoBehaviour
 
         Debug.Log("Table assignment: " + tableAssignment);
 
+        // Get all the waypoints
         path = GameObject.FindGameObjectsWithTag("Path");
 
+        // Assign a path based on the table assignment
         if (tableAssignment == 0) {
             tablePath = new GameObject[] {
                 path[0],
@@ -65,7 +67,7 @@ public class CustomerScript : MonoBehaviour
         } 
 
         // TODO: Eventually start queueing customers if this isn't a valid table
-        
+
         // Generate a random sprite for the character
         int customerSpriteID = Random.Range(0, 5);
         spriteRenderer.sprite = spriteArray[customerSpriteID];
@@ -73,8 +75,8 @@ public class CustomerScript : MonoBehaviour
 
     // Update is called once per frame
     void Update() {   
-        
         move();
+
         // TODO: Delete character after done eating
     }
 
