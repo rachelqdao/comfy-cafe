@@ -141,13 +141,15 @@ public class CustomerScript : MonoBehaviour
 
     public void eat() {
         if (finishedOrderingItem == true) {
-
             speechBubble.gameObject.SetActive(false);
 
             // Timer for customers to sit at the table and eat
+            // TODO: timer should be based on the food they order
+            // TODO: show animation of food going from kitchen -> table?
             if (timer < 15) {
                 timer = timer + Time.deltaTime;
             } else {
+                // TODO: update money + hearts here when done eating
                 finishedEating = true;
                 timer = 0;
             }
