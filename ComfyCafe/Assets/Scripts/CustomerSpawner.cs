@@ -10,6 +10,8 @@ public class CustomerSpawner : MonoBehaviour
 
     public GameObject[] customers;
 
+    public GameObject promoButton;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +37,9 @@ public class CustomerSpawner : MonoBehaviour
 
     public void spawnCustomer() {
         // set the customer sprite here
-        GameObject customer = Instantiate(customerPrefab, transform.position, transform.rotation, GameObject.FindGameObjectWithTag("Background").transform);
+        if (customers.Length < 11) {
+            GameObject customer = Instantiate(customerPrefab, transform.position, transform.rotation, GameObject.FindGameObjectWithTag("Background").transform);
+        }
     }
 
 }

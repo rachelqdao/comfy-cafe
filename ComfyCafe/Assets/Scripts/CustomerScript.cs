@@ -34,8 +34,6 @@ public class CustomerScript : MonoBehaviour
     bool finishedMovingToCenterFromTable = false;
     bool finishedLeaveRestaurant = false;
 
-    bool movedToQueue = false;
-
     // Start is called before the first frame update
     void Start()
     {   
@@ -121,6 +119,8 @@ public class CustomerScript : MonoBehaviour
     }
 
     public void moveToTable() {
+        spriteRenderer.sortingOrder = tableAssignment + 3;  
+
         if (pathIndex <= tablePath.Length - 1) {
             transform.position = Vector2.MoveTowards(transform.position, tablePath[pathIndex].transform.position, moveSpeed * Time.deltaTime);
 
@@ -183,13 +183,6 @@ public class CustomerScript : MonoBehaviour
 
     public void moveToQueue() {
         transform.position = Vector2.MoveTowards(transform.position, queue[queueAssignment].transform.position, moveSpeed * Time.deltaTime);
-
-        if (transform.position == queue[queueAssignment].transform.position) {
-            movedToQueue = true;
-        }
     }
 
-    public void moveUpInQueue() {
-        transform.position = Vector2.MoveTowards(transform.position, queue[queueAssignment].transform.position, moveSpeed * Time.deltaTime);
-    }
 }
