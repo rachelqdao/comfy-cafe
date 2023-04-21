@@ -15,6 +15,10 @@ public class CustomerScript : MonoBehaviour
     public GameObject[] path;
     public GameObject[] tablePath;
 
+    bool finishedMovingToTable = false;
+    bool finishedMovingToCenterFromTable = false;
+    bool finishedLeaveRestaurant = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +26,7 @@ public class CustomerScript : MonoBehaviour
         tableManager = GameObject.FindGameObjectWithTag("TableManager").GetComponent<TableManager>();
         tableAssignment = tableManager.checkTableAvailability();
 
-        Debug.Log("Table assignment: " + tableAssignment);
+        // Debug.Log("Table assignment: " + tableAssignment);
 
         // Get all the waypoints
         path = GameObject.FindGameObjectsWithTag("Path");
@@ -75,18 +79,45 @@ public class CustomerScript : MonoBehaviour
 
     // Update is called once per frame
     void Update() {   
-        move();
+        moveToTable();
+        moveToCenterFromTable();
+        leaveRestaurant();
 
         // TODO: Delete character after done eating
     }
 
-    public void move() {
+    public void moveToTable() {
         if (pathIndex <= tablePath.Length - 1) {
             transform.position = Vector2.MoveTowards(transform.position, tablePath[pathIndex].transform.position, moveSpeed * Time.deltaTime);
 
             if (transform.position == tablePath[pathIndex].transform.position) {
                 pathIndex += 1;
             }
+        } 
+
+        if (transform.position == tablePath[2].transform.position) {
+            finishedMovingToTable = true;
         }
+    }
+
+    public void moveToCenterFromTable() {
+        if (finishedMovingToTable == true && finishedMovingToCenterFromTable == false) {
+            transform.position = Vector2.MoveTowards(transform.position, tablePath[1].transform.position, moveSpeed * Time.deltaTime);    
+        
+            if (transform.position == tablePath[1].transform.position) {
+                finishedMovingToCenterFromTable = true;
+            }
+        }
+    }
+
+    public void leaveRestaurant() {
+        if (finishedMovingToCenterFromTable == true && finishedLeaveRestaurant == false) {
+            transform.position = Vector2.MoveTowards(transform.position, path[10].transform.position, moveSpeed * Time.deltaTime);
+
+            if (transform.position == path[10].transform.position) {
+                finishedLeaveRestaurant = true;
+            }
+        }
+
     }
 }
