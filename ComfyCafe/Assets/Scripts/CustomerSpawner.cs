@@ -28,7 +28,6 @@ public class CustomerSpawner : MonoBehaviour
     public void spawnCustomer() {
         // set the customer sprite here
         GameObject customer = Instantiate(customerPrefab, transform.position, transform.rotation, GameObject.FindGameObjectWithTag("Background").transform);
-
     }
 
 }

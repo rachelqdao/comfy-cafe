@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CustomerScript : MonoBehaviour
 {
+
     public Sprite[] spriteArray;
     public SpriteRenderer spriteRenderer;
     public float moveSpeed = 5;
@@ -21,7 +22,7 @@ public class CustomerScript : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
+    {   
         // Get reference to TableManager script
         tableManager = GameObject.FindGameObjectWithTag("TableManager").GetComponent<TableManager>();
         tableAssignment = tableManager.checkTableAvailability();
@@ -82,7 +83,7 @@ public class CustomerScript : MonoBehaviour
         moveToTable();
         moveToCenterFromTable();
         leaveRestaurant();
-
+        deleteCustomer();
         // TODO: Delete character after done eating
     }
 
@@ -118,6 +119,12 @@ public class CustomerScript : MonoBehaviour
                 finishedLeaveRestaurant = true;
             }
         }
+    }
 
+    public void deleteCustomer() {
+        if (finishedLeaveRestaurant == true) {
+            Debug.Log("Destroy customer");
+            Destroy(gameObject);
+        }
     }
 }
