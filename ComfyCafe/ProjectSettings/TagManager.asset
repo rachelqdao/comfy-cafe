@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Background
+  - CustomerSpawner
+  - TableManager
+  - CustomerScript
+  - Table1
   layers:
   - Default
   - TransparentFX
