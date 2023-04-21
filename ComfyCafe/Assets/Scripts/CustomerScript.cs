@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CustomerScript : MonoBehaviour
 {
@@ -8,8 +9,7 @@ public class CustomerScript : MonoBehaviour
     public Sprite[] spriteArray;
     public SpriteRenderer spriteRenderer;
 
-    public GameObject speechBubble;
-    public Sprite speechBubbleSprite;
+    public Button speechBubble;
 
     public float timer = 0;
 
@@ -82,12 +82,9 @@ public class CustomerScript : MonoBehaviour
         int customerSpriteID = Random.Range(0, 7);
         spriteRenderer.sprite = spriteArray[customerSpriteID];
 
-        // Create a speech bubble  
-        /*
-        speechBubble = new GameObject("SpeechBubble");
-        SpriteRenderer speechBubbleRenderer = speechBubble.AddComponent<SpriteRenderer>();
-        speechBubbleRenderer.sprite = speechBubbleSprite;
-        */
+        // Hide Speech Bubble
+        speechBubble.gameObject.SetActive(false);
+        speechBubble.onClick.AddListener(takeOrder);
     }
 
     // Update is called once per frame
@@ -137,13 +134,16 @@ public class CustomerScript : MonoBehaviour
 
     public void orderItem() {
         if (finishedMovingToTable == true) {
-            // TODO: make some kind of speech bubble user has to tap here?
-            finishedOrderingItem = true;
+            speechBubble.gameObject.SetActive(true);
+            // finishedOrderingItem = true;
         }
     }
 
     public void eat() {
         if (finishedOrderingItem == true) {
+
+            speechBubble.gameObject.SetActive(false);
+
             // Timer for customers to sit at the table and eat
             if (timer < 15) {
                 timer = timer + Time.deltaTime;
@@ -185,4 +185,8 @@ public class CustomerScript : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, queue[queueAssignment].transform.position, moveSpeed * Time.deltaTime);
     }
 
+    public void takeOrder() {
+        Debug.Log("pushed button");
+        finishedOrderingItem = true;
+    }
 }
