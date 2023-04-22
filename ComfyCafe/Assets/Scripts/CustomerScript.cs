@@ -76,11 +76,11 @@ public class CustomerScript : MonoBehaviour
             Debug.Log("Queue Number: " + queueAssignment);
         }
 
-        // TODO: Eventually start queueing customers if this isn't a valid table
-
-        // Generate a random sprite for the character
+        // Generate a random sprite for the customer
         int customerSpriteID = Random.Range(0, 7);
         spriteRenderer.sprite = spriteArray[customerSpriteID];
+
+        // Generate a random food for the customer
 
         // Hide Speech Bubble
         speechBubble.gameObject.SetActive(false);
@@ -148,7 +148,7 @@ public class CustomerScript : MonoBehaviour
             // TODO: show animation of food going from kitchen -> table?
 
 
-            
+
             if (timer < 15) {
                 timer = timer + Time.deltaTime;
             } else {
