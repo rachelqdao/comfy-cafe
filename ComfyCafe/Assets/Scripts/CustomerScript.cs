@@ -9,8 +9,10 @@ public class CustomerScript : MonoBehaviour
     public Sprite[] spriteArray;
     public SpriteRenderer spriteRenderer;
 
+    // button to take customer order
     public Button speechBubble;
 
+    // wait timer for food
     public float timer = 0;
 
     // move speed
@@ -20,6 +22,7 @@ public class CustomerScript : MonoBehaviour
     public TableManager tableManager;
     public int tableAssignment;
     public int queueAssignment;
+    public TableScript tableScript;
     
     // pathing
     int pathIndex = 0;
@@ -28,6 +31,7 @@ public class CustomerScript : MonoBehaviour
     public GameObject[][] tablePaths;
     public GameObject[] tablePath;
 
+    // triggers to move through pathing
     bool finishedMovingToTable = false;
     bool finishedOrderingItem = false;
     bool finishedEating = false;
@@ -57,18 +61,9 @@ public class CustomerScript : MonoBehaviour
         tablePaths = new GameObject[][] {table1Path, table2Path, table3Path, table4Path, table5Path, table6Path};
     
         // Assign a path based on the table assignment
-        if (tableAssignment == 0) {
-            tablePath = table1Path;
-        } else if (tableAssignment == 1) {
-            tablePath = table2Path;
-        } else if (tableAssignment == 2) {
-            tablePath = table3Path;
-        } else if (tableAssignment == 3) {
-            tablePath = table4Path;
-        } else if (tableAssignment == 4) {
-            tablePath = table5Path;
-        } else if (tableAssignment == 5) {
-            tablePath = table6Path;
+        if (tableAssignment != -1) {
+            tablePath = tablePaths[tableAssignment];
+            getTableReference(tableAssignment);
         } else {
             Debug.Log("No tables available -- move to queue");
             // Get a queue number
@@ -107,11 +102,28 @@ public class CustomerScript : MonoBehaviour
                 if (tableAssignment >= 0) {
                     tableManager.queueAvailability[0] = true;
                     tablePath = tablePaths[tableAssignment];
+                    getTableReference(tableAssignment);
                 }
             // otherwise, check customer it can move up in the queue    
             } else {
                 queueAssignment = tableManager.checkQueuePositionBefore(queueAssignment);
             }
+        }
+    }
+
+    public void getTableReference(int tableAssignment) {
+        if (tableAssignment == 0) {
+            tableScript = GameObject.FindGameObjectWithTag("Table1").GetComponent<TableScript>();
+        } else if (tableAssignment == 1) {
+            tableScript = GameObject.FindGameObjectWithTag("Table2").GetComponent<TableScript>();
+        } else if (tableAssignment == 2) {
+            tableScript = GameObject.FindGameObjectWithTag("Table3").GetComponent<TableScript>();
+        } else if (tableAssignment == 3) {
+            tableScript = GameObject.FindGameObjectWithTag("Table4").GetComponent<TableScript>();
+        } else if (tableAssignment == 4) {
+            tableScript = GameObject.FindGameObjectWithTag("Table5").GetComponent<TableScript>();
+        } else if (tableAssignment == 5) {
+            tableScript = GameObject.FindGameObjectWithTag("Table6").GetComponent<TableScript>();
         }
     }
 
@@ -147,14 +159,23 @@ public class CustomerScript : MonoBehaviour
             // TODO: timer should be based on the food they order
             // TODO: show animation of food going from kitchen -> table?
 
+            // GET THE TIME TO COOK RECIPE CUSTOMER ORDERED HERE
+            int timeToCook = 5;
+            int timeToEat = timeToCook + 5;        // +5 seconds for eating
 
 
-            if (timer < 15) {
+            if (timer < timeToCook) {
+                // wait while food is cooking
                 timer = timer + Time.deltaTime;
+            } else if (timer > timeToCook && timer < timeToEat) {
+                // display food and eat
+                tableScript.displayFood();
+                timer = timer + Time.deltaTime;
+
             } else {
-                // TODO: update money + hearts here when done eating
+                // gtfo
+                tableScript.hideFood();
                 finishedEating = true;
-                timer = 0;
             }
         }
     }

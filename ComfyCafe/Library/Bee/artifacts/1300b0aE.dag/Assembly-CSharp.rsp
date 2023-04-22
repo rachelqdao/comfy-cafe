@@ -379,6 +379,7 @@
 "Assets/Scripts/ShopManagementScript.cs"
 "Assets/Scripts/ShopTabManager.cs"
 "Assets/Scripts/TableManager.cs"
+"Assets/Scripts/TableScript.cs"
 -langversion:9.0
 
 /deterministic
