@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6521726473214235868}
   - component: {fileID: 1466591810362164796}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1513434443
+  m_SortingLayer: 3
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 5a4e006c7893982409e55fac3bf870c7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -96,9 +96,9 @@ GameObject:
   - component: {fileID: 2017262621353392221}
   - component: {fileID: 8262728528630219405}
   - component: {fileID: 6149571230318251227}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: speechbubble
-  m_TagString: Untagged
+  m_TagString: SpeechBubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 8492352675559696607}
   - component: {fileID: 2070475384088344994}
   - component: {fileID: 7337429343313545432}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Customer
   m_TagString: Customer
   m_Icon: {fileID: 0}
