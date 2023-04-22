@@ -850,7 +850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popUpManager: {fileID: 0}
-  settingsPanel: {fileID: 0}
+  settingsPanel: {fileID: 453301314}
 --- !u!1 &411816731
 GameObject:
   m_ObjectHideFlags: 0
@@ -1363,10 +1363,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popUpManager: {fileID: 0}
-  shopPanel: {fileID: 0}
-  shopTab1: {fileID: 0}
-  shopTab2: {fileID: 0}
-  shopTab3: {fileID: 0}
+  shopPanel: {fileID: 1888141991}
+  shopTab1: {fileID: 974210932}
+  shopTab2: {fileID: 329466784}
+  shopTab3: {fileID: 443636072}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -4613,9 +4613,9 @@ MonoBehaviour:
   isFacilitiesOpen: 0
   isRecipesOpen: 0
   isDecorationsOpen: 0
-  facilitiesTab: {fileID: 0}
-  recipesTab: {fileID: 0}
-  decorationsTab: {fileID: 0}
+  facilitiesTab: {fileID: 974210934}
+  recipesTab: {fileID: 329466786}
+  decorationsTab: {fileID: 443636074}
 --- !u!1 &1505047086
 GameObject:
   m_ObjectHideFlags: 0
@@ -5567,7 +5567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popUpManager: {fileID: 0}
-  customerClosenessPanel: {fileID: 0}
+  customerClosenessPanel: {fileID: 2006655107}
 --- !u!1 &1843352899
 GameObject:
   m_ObjectHideFlags: 0
