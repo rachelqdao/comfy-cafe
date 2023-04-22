@@ -1,20 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class TableManager : MonoBehaviour
 {
     public bool[] tableAvailability;
-    private int numTables = 6;
-
+    public int numTables;
     public bool[] queueAvailability;
     private int numQueue = 5;
+
+    public GameObject[] tables; 
 
     // Start is called before the first frame update
     void Start()
     {
-        // All tables available on start
-        tableAvailability = new bool[] {true, true, true, true, true, true};
+        // TODO: Get number of tables available from JSON        
+        numTables = 2;
+
+        for (int i = 0; i < tables.Length; i++) {
+            if (i >= numTables) {
+                tables[i].SetActive(false);
+            }
+        }
+
+        tableAvailability = new bool[numTables];
+        Array.Fill(tableAvailability, true);
         queueAvailability = new bool[] {true, true, true, true, true};
 
     }

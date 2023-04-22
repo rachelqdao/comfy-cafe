@@ -373,6 +373,7 @@
 "Assets/Scripts/CustomerSpawner.cs"
 "Assets/Scripts/MoneyScript.cs"
 "Assets/Scripts/MoveBackground.cs"
+"Assets/Scripts/OvenScript.cs"
 "Assets/Scripts/PopUpManager.cs"
 "Assets/Scripts/SceneNavigation.cs"
 "Assets/Scripts/SettingsManagementScript.cs"

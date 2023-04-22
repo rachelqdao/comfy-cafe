@@ -147,7 +147,6 @@ public class CustomerScript : MonoBehaviour
     public void orderItem() {
         if (finishedMovingToTable == true) {
             speechBubble.gameObject.SetActive(true);
-            // finishedOrderingItem = true;
         }
     }
 
@@ -155,14 +154,10 @@ public class CustomerScript : MonoBehaviour
         if (finishedOrderingItem == true) {
             speechBubble.gameObject.SetActive(false);
 
-            // Timer for customers to sit at the table and eat
             // TODO: timer should be based on the food they order
-            // TODO: show animation of food going from kitchen -> table?
-
             // GET THE TIME TO COOK RECIPE CUSTOMER ORDERED HERE
             int timeToCook = 5;
             int timeToEat = timeToCook + 5;        // +5 seconds for eating
-
 
             if (timer < timeToCook) {
                 // wait while food is cooking
@@ -171,7 +166,6 @@ public class CustomerScript : MonoBehaviour
                 // display food and eat
                 tableScript.displayFood();
                 timer = timer + Time.deltaTime;
-
             } else {
                 // gtfo
                 tableScript.hideFood();

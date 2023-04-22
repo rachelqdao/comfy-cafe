@@ -7,6 +7,8 @@ public class CustomerSpawner : MonoBehaviour
     public GameObject customerPrefab;
     public float spawnRate = 3;
     private float timer = 0;
+    public int numTables;
+    public int maxCustomers;
 
     public GameObject[] customers;
 
@@ -15,17 +17,29 @@ public class CustomerSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Debug.Log("customer spawner position: " + transform.position);
+        // TODO: Get number of tables available from JSON
+        // Spawn enough customers that there are enough tables / queue spots for (tables + 5)
+        numTables = 2;
+        maxCustomers = numTables + 5;
+        customers = GameObject.FindGameObjectsWithTag("Customer");
+        
+        // spawn customer on start
+        spawnCustomer();
     }
 
     // Update is called once per frame
     void Update()
     {           
         
-        customers = GameObject.FindGameObjectsWithTag("Customer");
-        //Debug.Log("num customers = " + customers.Length);
+        // TODO: Get number of tables available from JSON
+        // Spawn enough customers that there are enough tables / queue spots for (tables + 5)
+        numTables = 2;
+        maxCustomers = numTables + 5;
 
-        if (customers.Length < 11) {
+        // Get all the customers in the restaurant atm
+        customers = GameObject.FindGameObjectsWithTag("Customer");
+
+        if (customers.Length < maxCustomers) {
             if (timer < spawnRate) {
                 timer = timer + Time.deltaTime;
             } else {
@@ -37,7 +51,7 @@ public class CustomerSpawner : MonoBehaviour
 
     public void spawnCustomer() {
         // set the customer sprite here
-        if (customers.Length < 11) {
+        if (customers.Length < maxCustomers) {
             GameObject customer = Instantiate(customerPrefab, transform.position, transform.rotation, GameObject.FindGameObjectWithTag("Background").transform);
         }
     }
