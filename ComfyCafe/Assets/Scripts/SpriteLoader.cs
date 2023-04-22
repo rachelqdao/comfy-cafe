@@ -2,6 +2,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using TMPro;
 using UnityEngine;
 using UnityEditor;
 
@@ -12,6 +13,7 @@ public class SpriteLoader : MonoBehaviour
     private IDataService dataService = new JsonDataService();
     private bool EncryptionEnabled;
 
+    public TextMeshProUGUI coinBalance, diamondBalance;
     public SpriteRenderer windowSR, wallhangingSR, table1SR, table2SR, table3SR, table4SR, table5SR, table6SR, oven1SR, oven2SR, oven3SR, oven4SR, oven5SR, oven6SR;
 
     // Start is called before the first frame update
@@ -27,6 +29,10 @@ public class SpriteLoader : MonoBehaviour
             try
             {
                 PlayerData data = dataService.LoadData<PlayerData>("/playerData.json", EncryptionEnabled);
+                // render text for coin and diamond balances
+                Debug.Log(data.coins.ToString());
+                coinBalance.SetText(data.coins.ToString());
+                diamondBalance.SetText(data.diamonds.ToString());
                 // check and render sprite for certain item types
                 // window
                 windowSR.sprite = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sprites/" + data.currentItems["window"] + ".png");
