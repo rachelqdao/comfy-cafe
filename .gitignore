@@ -10,7 +10,7 @@
 /ComfyCafe/Logs/
 /ComfyCafe/UserSettings/
 
-/ComfyCafe/Library/LastSceneManagerSetup.txt
+!/ComfyCafe/Library/LastSceneManagerSetup.txt
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
