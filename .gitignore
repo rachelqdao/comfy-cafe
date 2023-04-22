@@ -2,15 +2,24 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
-/ComfyCafe/Library/*
+
+/ComfyCafe/Library/APIUpdater/
+/ComfyCafe/Library/Artifacts/
+/ComfyCafe/Library/BuildPlayerData/
+/ComfyCafe/Library/PackageCache/
+/ComfyCafe/Library/PackageManager/
+/ComfyCafe/Library/PlayerDataCache/
+/ComfyCafe/Library/ScriptAssemblies/
+/ComfyCafe/Library/ShaderCache/
+/ComfyCafe/Library/StateCache/
+/ComfyCafe/Library/TempArtifacts/
+/ComfyCafe/Library/UIElements/
 /ComfyCafe/Temp/
 /ComfyCafe/Obj/
 /ComfyCafe/Build/
 /ComfyCafe/Builds/
 /ComfyCafe/Logs/
 /ComfyCafe/UserSettings/
-
-!/ComfyCafe/Library/LastSceneManagerSetup.txt
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
