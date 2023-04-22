@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CustomerScript : MonoBehaviour
 {
-    // sprites
+    // customer sprites
     public Sprite[] spriteArray;
     public SpriteRenderer spriteRenderer;
 
@@ -146,6 +146,9 @@ public class CustomerScript : MonoBehaviour
             // Timer for customers to sit at the table and eat
             // TODO: timer should be based on the food they order
             // TODO: show animation of food going from kitchen -> table?
+
+
+            
             if (timer < 15) {
                 timer = timer + Time.deltaTime;
             } else {
