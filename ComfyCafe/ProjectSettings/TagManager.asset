@@ -18,6 +18,7 @@ TagManager:
   - Table4
   - Table5
   - Table6
+  - OrderManager
   layers:
   - Default
   - TransparentFX
