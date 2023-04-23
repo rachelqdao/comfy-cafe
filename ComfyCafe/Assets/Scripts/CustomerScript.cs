@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class CustomerScript : MonoBehaviour
-{
+{   
     // customer sprites
     public Sprite[] spriteArray;
     public SpriteRenderer spriteRenderer;
@@ -23,6 +24,10 @@ public class CustomerScript : MonoBehaviour
     public int tableAssignment;
     public int queueAssignment;
     public TableScript tableScript;
+
+    // order management
+    public OrderManager orderManager;
+    public string recipe;
     
     // pathing
     int pathIndex = 0;
@@ -44,6 +49,9 @@ public class CustomerScript : MonoBehaviour
         // Get reference to TableManager script
         tableManager = GameObject.FindGameObjectWithTag("TableManager").GetComponent<TableManager>();
         tableAssignment = tableManager.checkTableAvailability();
+
+        // Get reference to OrderManager script
+        orderManager = GameObject.FindGameObjectWithTag("OrderManager").GetComponent<OrderManager>();
 
         // Get all the path waypoints
         path = GameObject.FindGameObjectsWithTag("Path");
@@ -72,10 +80,14 @@ public class CustomerScript : MonoBehaviour
         }
 
         // Generate a random sprite for the customer
-        int customerSpriteID = Random.Range(0, 7);
+        int customerSpriteID = UnityEngine.Random.Range(0, 7);
         spriteRenderer.sprite = spriteArray[customerSpriteID];
 
-        // Generate a random food for the customer
+        // TODO: Generate a random food for the customer
+        string[] ownedRecipes = orderManager.getOwnedRecipes();
+        int ownedRecipeID = UnityEngine.Random.Range(0, ownedRecipes.Length);
+        recipe = ownedRecipes[ownedRecipeID];
+        // Debug.Log("Customer random recipe: " + ownedRecipes[ownedRecipeID]);
 
         // Hide Speech Bubble
         speechBubble.gameObject.SetActive(false);
@@ -156,18 +168,21 @@ public class CustomerScript : MonoBehaviour
 
             // TODO: timer should be based on the food they order
             // GET THE TIME TO COOK RECIPE CUSTOMER ORDERED HERE
-            int timeToCook = 5;
+            int timeToCook = orderManager.getRecipeCookTime(recipe);
             int timeToEat = timeToCook + 5;        // +5 seconds for eating
+
+            // Debug.Log("time to eat (should be 10): " + timeToEat);
 
             if (timer < timeToCook) {
                 // wait while food is cooking
                 timer = timer + Time.deltaTime;
             } else if (timer > timeToCook && timer < timeToEat) {
                 // display food and eat
-                tableScript.displayFood();
+                tableScript.displayFood(recipe);
                 timer = timer + Time.deltaTime;
             } else {
                 // gtfo
+                // TODO: add money to currency
                 tableScript.hideFood();
                 finishedEating = true;
             }

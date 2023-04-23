@@ -30,16 +30,18 @@ public class SpriteLoader : MonoBehaviour
             {
                 PlayerData data = dataService.LoadData<PlayerData>("/playerData.json", EncryptionEnabled);
                 // render text for coin and diamond balances
-                Debug.Log(data.coins.ToString());
+                // Debug.Log(data.coins.ToString());
                 coinBalance.SetText(data.coins.ToString());
                 diamondBalance.SetText(data.diamonds.ToString());
                 // check and render sprite for certain item types
                 // window
                 windowSR.sprite = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sprites/" + data.currentItems["window"] + ".png");
+                Debug.Log("Assets/Sprites/" + data.currentItems["window"] + ".png");
                 // wallhangings 
                 wallhangingSR.sprite = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sprites/" + data.currentItems["wallhanging"] + ".png");
                 // can be converted to allow different table and oven variants in the future
                 // tables
+                /*
                 if (data.currentItems["table2"] != "table")
                 {
                     table2SR.enabled = false;
@@ -81,6 +83,7 @@ public class SpriteLoader : MonoBehaviour
                 {
                     oven6SR.enabled = false;
                 }
+                */
             }
             catch (Exception e)
             {

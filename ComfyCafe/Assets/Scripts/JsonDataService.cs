@@ -9,13 +9,13 @@ public class JsonDataService : IDataService
     public bool SaveData<T>(string RelativePath, T data, bool Encrypted)
     {
         string path = Application.persistentDataPath + RelativePath;
-        Debug.Log(path);
+        //Debug.Log(path);
 
         try
         {
             if (File.Exists(path))
             {
-                Debug.Log("Player data file exists.");
+                // Debug.Log("Player data file exists.");
                 return true;
             }
             else

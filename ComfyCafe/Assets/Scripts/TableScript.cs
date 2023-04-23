@@ -1,15 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class TableScript : MonoBehaviour
 {
-    public GameObject food;
+    public GameObject recipe;
+    public SpriteRenderer recipeSpriteRenderer;
 
     // Start is called before the first frame update
     void Start()
     {
-        food.SetActive(false);
+        recipe.SetActive(false);
     }
 
     // Update is called once per frame
@@ -18,18 +20,16 @@ public class TableScript : MonoBehaviour
         
     }
 
-    public void displayFood() {
-        // TODO: pass in the name of a sprite to display?
-
+    public void displayFood(string recipeName) {
         // render the sprite
-
+        recipeSpriteRenderer.sprite = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sprites/" + recipeName + ".png");
+        Debug.Log("Path: " + "Assets/Sprites/" + recipeName + ".png" );
         // set the food to be active
-        food.SetActive(true);
-
+        recipe.SetActive(true);
     }
 
     public void hideFood() {
         // set the food to be inactive
-        food.SetActive(false);
+        recipe.SetActive(false);
     }
 }
