@@ -119,7 +119,6 @@ public class FacilitiesPanelManager : MonoBehaviour
             tableButtons[i].interactable = false;
 
             // pass stuff to table manager to show up in restaurant?
-
             string tokenPath = "items." + tableName + ".owned";
             
             string path = Application.persistentDataPath + "/playerData.json";
