@@ -29,7 +29,7 @@ TagManager:
   - UI
   - Transparency
   - Background
-  - 
+  - Shop
   - 
   - 
   - 
@@ -65,4 +65,7 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 1627875143
+    locked: 0
+  - name: Shop
+    uniqueID: 1680665929
     locked: 0
