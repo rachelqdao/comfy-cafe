@@ -10,6 +10,8 @@ public class CustomerSpawner : MonoBehaviour
     public int numTables;
     public int maxCustomers;
 
+    public TableManager tableManager;
+
     public GameObject[] customers;
 
     public GameObject promoButton;
@@ -19,10 +21,12 @@ public class CustomerSpawner : MonoBehaviour
     {
         // TODO: Get number of tables available from JSON
         // Spawn enough customers that there are enough tables / queue spots for (tables + 5)
-        numTables = 2;
-        maxCustomers = numTables + 5;
-        customers = GameObject.FindGameObjectsWithTag("Customer");
         
+        tableManager = GameObject.FindGameObjectWithTag("TableManager").GetComponent<TableManager>();
+
+        maxCustomers = tableManager.numOwnedTables + 5;
+        customers = GameObject.FindGameObjectsWithTag("Customer");
+
         // spawn customer on start
         spawnCustomer();
     }
@@ -30,11 +34,9 @@ public class CustomerSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {           
-        
         // TODO: Get number of tables available from JSON
         // Spawn enough customers that there are enough tables / queue spots for (tables + 5)
-        numTables = 2;
-        maxCustomers = numTables + 5;
+        maxCustomers = tableManager.numOwnedTables + 5;
 
         // Get all the customers in the restaurant atm
         customers = GameObject.FindGameObjectsWithTag("Customer");

@@ -24,6 +24,8 @@ public class FacilitiesPanelManager : MonoBehaviour
     public int clickedButtonIndex;
 
     public CurrencyManager currencyManager;
+    public TableManager tableManager;
+
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +34,9 @@ public class FacilitiesPanelManager : MonoBehaviour
 
         // Get reference to CurrencyManager script
         currencyManager = GameObject.FindGameObjectWithTag("CurrencyManager").GetComponent<CurrencyManager>();
+
+        // Get reference to tableManager script
+        tableManager = GameObject.FindGameObjectWithTag("TableManager").GetComponent<TableManager>();
 
         // Read data to get owned tables
         ownedTables = new bool[6];
@@ -119,6 +124,7 @@ public class FacilitiesPanelManager : MonoBehaviour
             tableButtons[i].interactable = false;
 
             // pass stuff to table manager to show up in restaurant?
+            Debug.Log("Buying table");
             string tokenPath = "items." + tableName + ".owned";
             
             string path = Application.persistentDataPath + "/playerData.json";
@@ -129,6 +135,13 @@ public class FacilitiesPanelManager : MonoBehaviour
             string updatedJsonString = jObject.ToString();
             File.WriteAllText(path, updatedJsonString);
             SerializeJson();
+
+            // TODO: reset table manager to show new table + make the table available
+            // tableManager.reconfigureTableManager();
+            tableManager.tableAvailability[i] = true;
+            tableManager.numOwnedTables = tableManager.numOwnedTables + 1;
+            tableManager.tables[i].SetActive(true);
+
         }       
     }
 

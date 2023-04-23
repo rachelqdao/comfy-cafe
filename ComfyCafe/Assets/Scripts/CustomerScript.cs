@@ -213,7 +213,16 @@ public class CustomerScript : MonoBehaviour
         
             if (transform.position == tablePath[1].transform.position) {
                 finishedMovingToCenterFromTable = true;
+
+                // TODO: FIX THIS AGIAN LOL
                 tableManager.tableAvailability[tableAssignment] = true;
+                /*
+                for (int i = 0; i < tableManager.numOwnedTables; i++) {
+                    if (tableManager.tablesAvailable[i] == tableAssignment) {
+                        tableManager.tableAvailability[i] = true;
+                    }
+                }
+                */
             }
         }
     }
