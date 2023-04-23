@@ -95,6 +95,15 @@ public class FacilitiesPanelManager : MonoBehaviour
         for (int i = 0; i < ownedTables.Length; i++) {
             if (ownedTables[i] == true) {
                 tableButtons[i].interactable = false;
+                GameObject panelCanvas = tablePanels[i].transform.GetChild(0).gameObject;
+
+                GameObject panelCoin = panelCanvas.transform.GetChild(2).gameObject;
+                GameObject panelCost = panelCanvas.transform.GetChild(3).gameObject;
+                GameObject panelOwned = panelCanvas.transform.GetChild(4).gameObject;
+
+                panelCoin.SetActive(false);
+                panelCost.SetActive(false);
+                panelOwned.SetActive(true);
             }
         }
     }
@@ -122,6 +131,16 @@ public class FacilitiesPanelManager : MonoBehaviour
 
             // gray out the button
             tableButtons[i].interactable = false;
+
+            GameObject panelCanvas = tablePanels[i].transform.GetChild(0).gameObject;
+
+            GameObject panelCoin = panelCanvas.transform.GetChild(2).gameObject;
+            GameObject panelCost = panelCanvas.transform.GetChild(3).gameObject;
+            GameObject panelOwned = panelCanvas.transform.GetChild(4).gameObject;
+
+            panelCoin.SetActive(false);
+            panelCost.SetActive(false);
+            panelOwned.SetActive(true);
 
             // pass stuff to table manager to show up in restaurant?
             Debug.Log("Buying table");
