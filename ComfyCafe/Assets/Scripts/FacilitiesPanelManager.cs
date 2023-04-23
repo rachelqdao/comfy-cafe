@@ -121,7 +121,7 @@ public class FacilitiesPanelManager : MonoBehaviour
         string tableName = "table" + j;
         Debug.Log("Table name: " + tableName);
         
-
+        SerializeJson();
         // Check if enought money
         if (data.coins > data.items[tableName].cost) {
             // subtract money from balance if enough money
@@ -143,7 +143,6 @@ public class FacilitiesPanelManager : MonoBehaviour
             panelOwned.SetActive(true);
 
             // pass stuff to table manager to show up in restaurant?
-            Debug.Log("Buying table");
             string tokenPath = "items." + tableName + ".owned";
             
             string path = Application.persistentDataPath + "/playerData.json";
@@ -156,11 +155,9 @@ public class FacilitiesPanelManager : MonoBehaviour
             SerializeJson();
 
             // TODO: reset table manager to show new table + make the table available
-            // tableManager.reconfigureTableManager();
             tableManager.tableAvailability[i] = true;
             tableManager.numOwnedTables = tableManager.numOwnedTables + 1;
             tableManager.tables[i].SetActive(true);
-
         }       
     }
 

@@ -92,6 +92,11 @@ public class CustomerScript : MonoBehaviour
 
         // TODO: Generate a random food for the customer
         string[] ownedRecipes = orderManager.getOwnedRecipes();
+
+        foreach(var recipename in ownedRecipes) {
+            Debug.Log(recipename + "owned in customer script");
+        }
+        
         int ownedRecipeID = UnityEngine.Random.Range(0, ownedRecipes.Length);
         recipe = ownedRecipes[ownedRecipeID];
         // Debug.Log("Customer random recipe: " + ownedRecipes[ownedRecipeID]);
