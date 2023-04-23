@@ -5929,7 +5929,7 @@ GameObject:
   - component: {fileID: 1850740261}
   m_Layer: 0
   m_Name: CurrencyManager
-  m_TagString: Untagged
+  m_TagString: CurrencyManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5946,8 +5946,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88d4f57ee818b15448da90d6fa848dcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinBalance: {fileID: 1456300706}
-  diamondBalance: {fileID: 1059736508}
+  coinBalanceText: {fileID: 1456300706}
+  diamondBalanceText: {fileID: 1059736508}
+  coinBalance: 0
+  diamondBalance: 0
 --- !u!4 &1850740262
 Transform:
   m_ObjectHideFlags: 0

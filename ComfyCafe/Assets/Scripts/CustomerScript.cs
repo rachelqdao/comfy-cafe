@@ -28,6 +28,9 @@ public class CustomerScript : MonoBehaviour
     // order management
     public OrderManager orderManager;
     public string recipe;
+
+    // currency management
+    public CurrencyManager currencyManager;
     
     // pathing
     int pathIndex = 0;
@@ -43,6 +46,8 @@ public class CustomerScript : MonoBehaviour
     bool finishedMovingToCenterFromTable = false;
     bool finishedLeaveRestaurant = false;
 
+    bool coinsAdded = false;
+
     // Start is called before the first frame update
     void Start()
     {   
@@ -52,6 +57,10 @@ public class CustomerScript : MonoBehaviour
 
         // Get reference to OrderManager script
         orderManager = GameObject.FindGameObjectWithTag("OrderManager").GetComponent<OrderManager>();
+
+
+        // Get reference to OrderManager script
+        currencyManager = GameObject.FindGameObjectWithTag("CurrencyManager").GetComponent<CurrencyManager>();
 
         // Get all the path waypoints
         path = GameObject.FindGameObjectsWithTag("Path");
@@ -73,10 +82,8 @@ public class CustomerScript : MonoBehaviour
             tablePath = tablePaths[tableAssignment];
             getTableReference(tableAssignment);
         } else {
-            Debug.Log("No tables available -- move to queue");
             // Get a queue number
             queueAssignment = tableManager.checkQueueAvailability();
-            Debug.Log("Queue Number: " + queueAssignment);
         }
 
         // Generate a random sprite for the customer
@@ -96,6 +103,7 @@ public class CustomerScript : MonoBehaviour
 
     // Update is called once per frame
     void Update() {   
+
         if (tableAssignment >= 0) {
             moveToTable();
             orderItem();
@@ -183,9 +191,19 @@ public class CustomerScript : MonoBehaviour
             } else {
                 // gtfo
                 // TODO: add money to currency
+                // Debug.Log("Cost of " + recipe + ": " + orderManager.getRecipeEarnings(recipe));
+                
+                addToCoinBalance();
                 tableScript.hideFood();
                 finishedEating = true;
             }
+        }
+    }
+
+    public void addToCoinBalance() {
+        if (finishedEating == true && coinsAdded == false) {
+            coinsAdded = true;
+            currencyManager.addCoins(orderManager.getRecipeEarnings(recipe));
         }
     }
 
@@ -221,7 +239,6 @@ public class CustomerScript : MonoBehaviour
     }
 
     public void takeOrder() {
-        Debug.Log("pushed button");
         finishedOrderingItem = true;
     }
 }

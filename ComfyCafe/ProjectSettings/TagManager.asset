@@ -19,6 +19,7 @@ TagManager:
   - Table5
   - Table6
   - OrderManager
+  - CurrencyManager
   layers:
   - Default
   - TransparentFX

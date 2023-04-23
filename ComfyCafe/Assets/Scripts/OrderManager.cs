@@ -34,7 +34,7 @@ public class OrderManager : MonoBehaviour
     }
     
     public int getRecipeEarnings(String recipeName) {
-        return data.recipes[recipeName].cookTime;
+        return data.recipes[recipeName].earnings;
     }
 
     public string[] getOwnedRecipes() {
