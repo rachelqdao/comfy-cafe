@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1513434443
   m_SortingLayer: 1
-  m_SortingOrder: 3
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 5a4e006c7893982409e55fac3bf870c7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -285,6 +285,10 @@ MonoBehaviour:
   tableManager: {fileID: 0}
   tableAssignment: 0
   queueAssignment: 0
+  tableScript: {fileID: 0}
+  orderManager: {fileID: 0}
+  recipe: 
+  currencyManager: {fileID: 0}
   path: []
   queue: []
   tablePath: []

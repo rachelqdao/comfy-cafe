@@ -96,6 +96,11 @@ public class CustomerScript : MonoBehaviour
 
         // TODO: Generate a random food for the customer
         string[] ownedRecipes = orderManager.getOwnedRecipes();
+
+        foreach(var recipename in ownedRecipes) {
+            Debug.Log(recipename + "owned in customer script");
+        }
+
         int ownedRecipeID = UnityEngine.Random.Range(0, ownedRecipes.Length);
         recipe = ownedRecipes[ownedRecipeID];
         Debug.Log("Customer random recipe: " + ownedRecipes[ownedRecipeID]);
@@ -199,8 +204,11 @@ public class CustomerScript : MonoBehaviour
             if (timer < timeToCook) {
                 // wait while food is cooking
                 timer = timer + Time.deltaTime;
+                tableScript.displayTimer(timer, timeToCook);
+
             } else if (timer > timeToCook && timer < timeToEat) {
                 // display food and eat
+                tableScript.hideTimer();
                 tableScript.displayFood(recipe);
                 timer = timer + Time.deltaTime;
             } else {

@@ -27,6 +27,7 @@ public class RecipesPanelManager : MonoBehaviour
     public int clickedButtonIndex;
 
     public CurrencyManager currencyManager;
+    public OrderManager orderManager;
 
     // Start is called before the first frame update
     void Start()
@@ -36,22 +37,29 @@ public class RecipesPanelManager : MonoBehaviour
         // List of recipes by name
         recipes = new string[] {"americano", "bubbletea", "bearlatte", "toast", "muffin", "cake"};
         ownedRecipes = new Dictionary<string, bool>();
+
         // Get reference to CurrencyManager script
         currencyManager = GameObject.FindGameObjectWithTag("CurrencyManager").GetComponent<CurrencyManager>();
+
+        // Get reference to OrderManager script
+        orderManager = GameObject.FindGameObjectWithTag("OrderManager").GetComponent<OrderManager>();
+
 
         // Read data to get owned recipes
         getOwnedRecipes();
         
+        /*
         Debug.Log("owned americano: " + ownedRecipes["americano"]);
         Debug.Log("owned bubble tea: " + ownedRecipes["bubbletea"]);
         Debug.Log("owned bear latte: " + ownedRecipes["bearlatte"]);
         Debug.Log("owned toast: " + ownedRecipes["toast"]);
         Debug.Log("owned muffin: " + ownedRecipes["muffin"]);
         Debug.Log("owned cake: " + ownedRecipes["cake"]);
+        */
 
         // Configure buttons
-        //addRecipeButtonListeners();
-        //disableButtons();
+        addRecipeButtonListeners();
+        disableButtons();
     }
 
     // Update is called once per frame
@@ -70,45 +78,69 @@ public class RecipesPanelManager : MonoBehaviour
         }
     }
 
-    /*
-    public void getOwnedRecipes() {
-        if (data.recipes["americano"].owned == true) {
-            ownedRecipes[0] = true;
-        } else {
-            ownedRecipes[0] = false;
-        }
+    public void disableButtons() {
+        for (int i = 0; i < recipes.Length; i++) {
+            if (ownedRecipes[recipes[i]] == true) {
+                recipeButtons[i].interactable = false;
+                GameObject panelCanvas = recipePanels[i].transform.GetChild(0).gameObject;
 
-         if (data.recipes["bubbletea"].owned == true) {
-            ownedRecipes[1] = true;
-        } else {
-            ownedRecipes[1] = false;
-        }
+                GameObject panelCoin = panelCanvas.transform.GetChild(2).gameObject;
+                GameObject panelCost = panelCanvas.transform.GetChild(3).gameObject;
+                GameObject panelOwned = panelCanvas.transform.GetChild(4).gameObject;
 
-        if (data.recipes["bearlatte"].owned == true) {
-            ownedRecipes[2] = true;
-        } else {
-            ownedRecipes[2] = false;
-        }
-
-        if (data.recipes["toast"].owned == true) {
-            ownedRecipes[3] = true;
-        } else {
-            ownedRecipes[3] = false;
-        }
-
-        if (data.recipes["muffin"].owned == true) {
-            ownedRecipes[4] = true;
-        } else {
-            ownedRecipes[4] = false;
-        }
-
-        if (data.recipes["cake"].owned == true) {
-            ownedRecipes[5] = true;
-        } else {
-            ownedRecipes[5] = false;
+                panelCoin.SetActive(false);
+                panelCost.SetActive(false);
+                panelOwned.SetActive(true);
+            }
         }
     }
-    */
+
+    public void addRecipeButtonListeners() {
+        for (int i = 0; i < recipeButtons.Length; i++) {
+            int x = i;
+            recipeButtons[i].onClick.RemoveAllListeners();
+            recipeButtons[i].onClick.AddListener(() => buyRecipe(x));
+        }
+    }
+
+    public void buyRecipe(int i) {
+        Debug.Log("Bought recipe: " + recipes[i]);
+
+        SerializeJson();
+        if (data.coins > data.recipes[recipes[i]].cost) {
+
+            // subtract coins
+            currencyManager.subtractCoins(data.recipes[recipes[i]].cost);
+
+            // set the button and panel
+            recipeButtons[i].interactable = false;
+            GameObject panelCanvas = recipePanels[i].transform.GetChild(0).gameObject;
+
+            GameObject panelCoin = panelCanvas.transform.GetChild(2).gameObject;
+            GameObject panelCost = panelCanvas.transform.GetChild(3).gameObject;
+            GameObject panelOwned = panelCanvas.transform.GetChild(4).gameObject;
+
+            panelCoin.SetActive(false);
+            panelCost.SetActive(false);
+            panelOwned.SetActive(true);
+
+            // write back to json
+            string tokenPath = "recipes." + recipes[i] + ".owned";
+
+            string path = Application.persistentDataPath + "/playerData.json";
+            string json = File.ReadAllText(path);
+            JObject jObject = JsonConvert.DeserializeObject(json) as JObject;
+            JToken jToken = jObject.SelectToken(tokenPath);
+            jToken.Replace(true);
+            string updatedJsonString = jObject.ToString();
+            File.WriteAllText(path, updatedJsonString);
+            SerializeJson();
+
+            // Set order manager to be able to order the new recipe
+            orderManager.updateOwnedRecipes();
+        }
+    }
+
 
     public void SerializeJson()
     {

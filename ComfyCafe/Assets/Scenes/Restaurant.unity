@@ -2826,7 +2826,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.19, y: 1.93}
+  m_AnchoredPosition: {x: 0.07, y: 1.93}
   m_SizeDelta: {x: 2.892, y: 0.99}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &200449167
@@ -3096,7 +3096,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.23, y: 1.93}
+  m_AnchoredPosition: {x: 0.07, y: 1.93}
   m_SizeDelta: {x: 2.899, y: 0.99}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &200505604
@@ -12204,7 +12204,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 1627875143
-  m_SortingOrder: 1
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!224 &782740351
 RectTransform:
@@ -12699,6 +12699,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2667802261750970459, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 251.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2667802261750970459, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 104.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2667802261750970459, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -775
+      objectReference: {fileID: 0}
+    - target: {fileID: 2667802261750970459, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -444
+      objectReference: {fileID: 0}
     - target: {fileID: 3061858250747364171, guid: cf70e6882efa78843946e556670ecb63, type: 3}
       propertyPath: recipe
       value: 
@@ -12707,6 +12723,34 @@ PrefabInstance:
       propertyPath: recipeSpriteRenderer
       value: 
       objectReference: {fileID: 2139755166}
+    - target: {fileID: 4875207424394734638, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6861706382148877121, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6861706382148877121, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6915995369329024843, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8510274436078442600, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8510274436078442600, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1231812415
+      objectReference: {fileID: 0}
+    - target: {fileID: 8510274436078442600, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_OverrideSorting
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf70e6882efa78843946e556670ecb63, type: 3}
 --- !u!1 &803972073
@@ -14209,6 +14253,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2667802261750970459, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 251.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2667802261750970459, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 104.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2667802261750970459, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -785
+      objectReference: {fileID: 0}
+    - target: {fileID: 2667802261750970459, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -444
+      objectReference: {fileID: 0}
     - target: {fileID: 3061858250747364171, guid: cf70e6882efa78843946e556670ecb63, type: 3}
       propertyPath: recipe
       value: 
@@ -14217,6 +14277,34 @@ PrefabInstance:
       propertyPath: recipeSpriteRenderer
       value: 
       objectReference: {fileID: 752739616}
+    - target: {fileID: 4875207424394734638, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6861706382148877121, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6861706382148877121, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6915995369329024843, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8510274436078442600, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8510274436078442600, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1231812415
+      objectReference: {fileID: 0}
+    - target: {fileID: 8510274436078442600, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_OverrideSorting
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf70e6882efa78843946e556670ecb63, type: 3}
 --- !u!1 &918949116
@@ -18887,10 +18975,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05ddbd55417be3c49ba90bb1315e77f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  recipePanels: []
-  recipeButtons: []
+  recipePanels:
+  - {fileID: 542616914}
+  - {fileID: 742135859}
+  - {fileID: 2097808079}
+  - {fileID: 820230015}
+  - {fileID: 1777396639}
+  - {fileID: 379683902}
+  recipeButtons:
+  - {fileID: 542616920}
+  - {fileID: 742135863}
+  - {fileID: 2097808083}
+  - {fileID: 820230021}
+  - {fileID: 1777396643}
+  - {fileID: 379683906}
   clickedButtonIndex: 0
   currencyManager: {fileID: 0}
+  orderManager: {fileID: 0}
 --- !u!1 &1191744793
 GameObject:
   m_ObjectHideFlags: 0
@@ -20080,8 +20181,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.059999, y: 1.93}
-  m_SizeDelta: {x: 2.448, y: 0.99}
+  m_AnchoredPosition: {x: 0.12, y: 1.93}
+  m_SizeDelta: {x: 2.818, y: 0.99}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1294040594
 MonoBehaviour:
@@ -24736,7 +24837,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1598336277
 RectTransform:
   m_ObjectHideFlags: 0
@@ -24754,7 +24855,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.22, y: 1.93}
+  m_AnchoredPosition: {x: 0.07, y: 1.93}
   m_SizeDelta: {x: 2.78, y: 0.99}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1598336278
@@ -25476,6 +25577,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2667802261750970459, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 251.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2667802261750970459, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 104.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2667802261750970459, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -791
+      objectReference: {fileID: 0}
+    - target: {fileID: 2667802261750970459, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -444
+      objectReference: {fileID: 0}
     - target: {fileID: 3061858250747364171, guid: cf70e6882efa78843946e556670ecb63, type: 3}
       propertyPath: recipe
       value: 
@@ -25484,6 +25601,34 @@ PrefabInstance:
       propertyPath: recipeSpriteRenderer
       value: 
       objectReference: {fileID: 1468493695}
+    - target: {fileID: 4875207424394734638, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6861706382148877121, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6861706382148877121, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6915995369329024843, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8510274436078442600, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8510274436078442600, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1231812415
+      objectReference: {fileID: 0}
+    - target: {fileID: 8510274436078442600, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_OverrideSorting
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf70e6882efa78843946e556670ecb63, type: 3}
 --- !u!1 &1655876259
@@ -26494,6 +26639,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2667802261750970459, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 251.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2667802261750970459, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 104.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2667802261750970459, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -800
+      objectReference: {fileID: 0}
+    - target: {fileID: 2667802261750970459, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -444
+      objectReference: {fileID: 0}
     - target: {fileID: 3061858250747364171, guid: cf70e6882efa78843946e556670ecb63, type: 3}
       propertyPath: recipe
       value: 
@@ -26502,6 +26663,34 @@ PrefabInstance:
       propertyPath: recipeSpriteRenderer
       value: 
       objectReference: {fileID: 1816890128}
+    - target: {fileID: 4875207424394734638, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6861706382148877121, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6861706382148877121, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6915995369329024843, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8510274436078442600, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8510274436078442600, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1231812415
+      objectReference: {fileID: 0}
+    - target: {fileID: 8510274436078442600, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_OverrideSorting
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf70e6882efa78843946e556670ecb63, type: 3}
 --- !u!1 &1707510628
@@ -27424,6 +27613,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2667802261750970459, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 251.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2667802261750970459, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 104.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2667802261750970459, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -780
+      objectReference: {fileID: 0}
+    - target: {fileID: 2667802261750970459, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -444
+      objectReference: {fileID: 0}
     - target: {fileID: 3061858250747364171, guid: cf70e6882efa78843946e556670ecb63, type: 3}
       propertyPath: recipe
       value: 
@@ -27432,6 +27637,34 @@ PrefabInstance:
       propertyPath: recipeSpriteRenderer
       value: 
       objectReference: {fileID: 744166966}
+    - target: {fileID: 4875207424394734638, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6861706382148877121, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6861706382148877121, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6915995369329024843, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8510274436078442600, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8510274436078442600, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1231812415
+      objectReference: {fileID: 0}
+    - target: {fileID: 8510274436078442600, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_OverrideSorting
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf70e6882efa78843946e556670ecb63, type: 3}
 --- !u!1 &1777396639
@@ -28922,6 +29155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a10bc41850a2b346ab2a55f6b3d0020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ownedRecipes: []
 --- !u!1 &1850740259
 GameObject:
   m_ObjectHideFlags: 0
@@ -30795,6 +31029,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2667802261750970459, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 251.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2667802261750970459, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 104.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2667802261750970459, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -792
+      objectReference: {fileID: 0}
+    - target: {fileID: 2667802261750970459, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -444
+      objectReference: {fileID: 0}
     - target: {fileID: 3061858250747364171, guid: cf70e6882efa78843946e556670ecb63, type: 3}
       propertyPath: recipe
       value: 
@@ -30803,6 +31053,42 @@ PrefabInstance:
       propertyPath: recipeSpriteRenderer
       value: 
       objectReference: {fileID: 1140488939}
+    - target: {fileID: 4718109626394278225, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4875207424394734638, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6861706382148877121, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6861706382148877121, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6915995369329024843, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7152965128392625322, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8510274436078442600, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8510274436078442600, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1231812415
+      objectReference: {fileID: 0}
+    - target: {fileID: 8510274436078442600, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+      propertyPath: m_OverrideSorting
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf70e6882efa78843946e556670ecb63, type: 3}
 --- !u!1 &1968512700

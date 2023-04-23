@@ -16,17 +16,18 @@ public class OrderManager : MonoBehaviour
     private bool EncryptionEnabled;
 
     private string[] recipes;
+    public string[] ownedRecipes;
 
     // Start is called before the first frame update
     void Start()
     {
         SerializeJson();
         recipes = new string[] {"americano", "bubbletea", "bearlatte", "toast", "muffin", "cake"};
+        updateOwnedRecipes();
     }
 
     void Update() {
-        // constantly check for updates to owned recipes?
-        SerializeJson();
+        //SerializeJson();
     }
 
     public int getRecipeCookTime(String recipeName) {
@@ -38,6 +39,11 @@ public class OrderManager : MonoBehaviour
     }
 
     public string[] getOwnedRecipes() {
+        return ownedRecipes;
+    }
+
+    public void updateOwnedRecipes() {
+        SerializeJson();
         List<string> ownedRecipeList = new List<string>();
 
         for (int i = 0; i < recipes.Length; i++) {
@@ -46,8 +52,7 @@ public class OrderManager : MonoBehaviour
             }
         }
 
-        string[] ownedRecipes = ownedRecipeList.ToArray();
-        return ownedRecipes;
+        ownedRecipes = ownedRecipeList.ToArray();
     }
 
     public void SerializeJson()
