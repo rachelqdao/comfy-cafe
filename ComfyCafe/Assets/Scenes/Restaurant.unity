@@ -8142,7 +8142,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &477232945
 RectTransform:
   m_ObjectHideFlags: 0
@@ -31873,7 +31873,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2006655108}
   - component: {fileID: 2006655109}
-  - component: {fileID: 2006655110}
   m_Layer: 0
   m_Name: customerpanel
   m_TagString: Untagged
@@ -31955,48 +31954,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2006655110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2006655107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8364108c27e793049a68db1ce6e5db76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteArray:
-  - {fileID: 21300000, guid: c336469cc88f73c438da77b313cdcd09, type: 3}
-  - {fileID: 21300000, guid: e641aa210c41e094bb196c6fb1001f18, type: 3}
-  - {fileID: 21300000, guid: cd4ebd095fddf8643a635b28b19fb5ec, type: 3}
-  - {fileID: 21300000, guid: 6c5c45aee1758e24cab79321a33590ac, type: 3}
-  - {fileID: 21300000, guid: 264b63835acd559498892e5b8f4817c3, type: 3}
-  - {fileID: 21300000, guid: 5a4e006c7893982409e55fac3bf870c7, type: 3}
-  - {fileID: 21300000, guid: 683b4efab790e4243910d5af644b9c27, type: 3}
-  spriteRenderer: {fileID: 0}
-  speechBubble: {fileID: 0}
-  timer: 0
-  moveSpeed: 5
-  tableManager: {fileID: 0}
-  tableAssignment: 0
-  queueAssignment: 0
-  tableScript: {fileID: 0}
-  orderManager: {fileID: 0}
-  recipe: 
-  customerPanels:
-  - {fileID: 591912634}
-  - {fileID: 1793401636}
-  - {fileID: 876958278}
-  - {fileID: 1975356011}
-  - {fileID: 131360375}
-  - {fileID: 701295364}
-  - {fileID: 495662710}
-  currencyManager: {fileID: 0}
-  path: []
-  queue: []
-  tablePath: []
 --- !u!1 &2020233764
 GameObject:
   m_ObjectHideFlags: 0
