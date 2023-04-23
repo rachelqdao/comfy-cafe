@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,6 +29,9 @@ public class CustomerScript : MonoBehaviour
     // order management
     public OrderManager orderManager;
     public string recipe;
+
+    // customer friendship management
+    public GameObject[] customerPanels;
 
     // currency management
     public CurrencyManager currencyManager;
@@ -94,11 +98,18 @@ public class CustomerScript : MonoBehaviour
         string[] ownedRecipes = orderManager.getOwnedRecipes();
         int ownedRecipeID = UnityEngine.Random.Range(0, ownedRecipes.Length);
         recipe = ownedRecipes[ownedRecipeID];
-        // Debug.Log("Customer random recipe: " + ownedRecipes[ownedRecipeID]);
+        Debug.Log("Customer random recipe: " + ownedRecipes[ownedRecipeID]);
 
         // Hide Speech Bubble
         speechBubble.gameObject.SetActive(false);
         speechBubble.onClick.AddListener(takeOrder);
+
+        Debug.Log("Customer: " + customerSpriteID);
+        GameObject panelCanvas = customerPanels[customerSpriteID].transform.GetChild(0).gameObject;
+        GameObject panelCount = panelCanvas.transform.GetChild(3).gameObject;
+
+        int customerCount = Int32.Parse(panelCount.name);
+        panelCount.GetComponent<Text>().text = customerCount++.ToString();
     }
 
     // Update is called once per frame
@@ -196,6 +207,8 @@ public class CustomerScript : MonoBehaviour
                 addToCoinBalance();
                 tableScript.hideFood();
                 finishedEating = true;
+
+
             }
         }
     }
