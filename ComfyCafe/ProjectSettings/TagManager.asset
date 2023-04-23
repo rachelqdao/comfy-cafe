@@ -23,6 +23,9 @@ TagManager:
   - DecorationsPanel
   - RecipesPanel
   - FacilitiesPanel
+  - TablePanelCanvas
+  - TablePanelCoin
+  - TablePanelCost
   layers:
   - Default
   - TransparentFX
