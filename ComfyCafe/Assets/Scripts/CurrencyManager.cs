@@ -38,8 +38,7 @@ public class CurrencyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // constantly check for updates to coin balance
-        // SerializeJson();
+
     }
 
     public void addCoins(int amount) {
@@ -60,9 +59,12 @@ public class CurrencyManager : MonoBehaviour
         string json = File.ReadAllText(path);
         JObject jObject = JsonConvert.DeserializeObject(json) as JObject;
         JToken jToken = jObject.SelectToken("coins");
-        jToken.Replace(2000);
+        jToken.Replace(data.coins - amount);
         string updatedJsonString = jObject.ToString();
         File.WriteAllText(path, updatedJsonString);
+
+        SerializeJson();
+        coinBalanceText.SetText(data.coins.ToString());
     }
 
     public void addDiamonds(int amount) {
