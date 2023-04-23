@@ -5,7 +5,10 @@
 
 /ComfyCafe/Library/APIUpdater/
 /ComfyCafe/Library/Artifacts/
+/ComfyCafe/Library/ArtifactDB
+/ComfyCafe/Library/Bee/
 /ComfyCafe/Library/BuildPlayerData/
+/ComfyCafe/Library/BurstCache/
 /ComfyCafe/Library/PackageCache/
 /ComfyCafe/Library/PackageManager/
 /ComfyCafe/Library/PlayerDataCache/
@@ -20,6 +23,13 @@
 /ComfyCafe/Builds/
 /ComfyCafe/Logs/
 /ComfyCafe/UserSettings/
+
+/ComfyCafe/Library/ArtifactDB-lock
+/ComfyCafe/Library/EditorInstance.json
+/ComfyCafe/Library/SceneVisibilityState.asset
+/ComfyCafe/Library/Search/transactions.db
+/ComfyCafe/Library/SourceAssetDB
+/ComfyCafe/Library/SourceAssetDB-lock
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
