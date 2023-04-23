@@ -30,28 +30,10 @@ public class ShopTabManager : MonoBehaviour
         recipesTabImage = recipesTab.GetComponent<Image>();
         decorationsTabImage = decorationsTab.GetComponent<Image>();
 
-        // Get refs to the individual shop panels
-        /*
-        facilitiesPanel = GameObject.FindGameObjectWithTag("FacilitiesPanel");
-        recipesPanel = GameObject.FindGameObjectWithTag("RecipesPanel");
-        decorationsPanel = GameObject.FindGameObjectWithTag("DecorationsPanel");
-        */
-
         // Open shop to facilities tab on start
         isFacilitiesOpen = true;
         isRecipesOpen = false;
         isDecorationsOpen = false;
-
-
-        /*
-        // Show proper tabs
-        facilitiesTabImage.color = Color.white;
-        recipesTabImage.color = Color.gray;
-        decorationsTabImage.color = Color.gray;
-
-        // Show proper panels
-        facilitiesPanel.SetActive();
-        */
     }
 
     // Update is called once per frame
