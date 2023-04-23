@@ -55,7 +55,7 @@ public class CurrencyManager : MonoBehaviour
     }
 
     public void subtractCoins(int amount) {
-        Debug.Log("Subtracting " + amount + "coins");
+        // Debug.Log("Subtracting " + amount + "coins");
         string path = Application.persistentDataPath + "/playerData.json";
         string json = File.ReadAllText(path);
         JObject jObject = JsonConvert.DeserializeObject(json) as JObject;
