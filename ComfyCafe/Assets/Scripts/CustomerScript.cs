@@ -104,12 +104,16 @@ public class CustomerScript : MonoBehaviour
         speechBubble.gameObject.SetActive(false);
         speechBubble.onClick.AddListener(takeOrder);
 
-        Debug.Log("Customer: " + customerSpriteID);
+        /*
+        string[] customersNames ={"shiba", "havanese", "rilakkuma", "korilakkuma", "bunny", "calico", "panda"}; 
+
+        Debug.Log("Customer: " + customersNames[customerSpriteID]);
         GameObject panelCanvas = customerPanels[customerSpriteID].transform.GetChild(0).gameObject;
         GameObject panelCount = panelCanvas.transform.GetChild(3).gameObject;
 
         int customerCount = Int32.Parse(panelCount.name);
         panelCount.GetComponent<Text>().text = customerCount++.ToString();
+        */
     }
 
     // Update is called once per frame
