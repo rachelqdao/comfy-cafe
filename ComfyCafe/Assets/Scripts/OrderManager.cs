@@ -57,8 +57,6 @@ public class OrderManager : MonoBehaviour
             try
             {
                 data = dataService.LoadData<PlayerData>("/playerData.json", EncryptionEnabled);
-                // render text for coin and diamond balances
-                // Debug.Log(data.recipes["americano"].earnings.ToString());
             }
             catch (Exception e)
             {
