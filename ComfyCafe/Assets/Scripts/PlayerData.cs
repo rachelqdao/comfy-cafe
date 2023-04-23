@@ -27,40 +27,131 @@ public class PlayerData
         { "oven6", "" }
     };
 
-    public Dictionary<string, bool> shop = new Dictionary<string, bool>()
+    public Dictionary<string, Item> items = new Dictionary<string, Item>()
     {
         // facilities : owned
         // tables
-        { "table1", true },
-        { "table2", false },
-        { "table3", false },
-        { "table4", false },
-        { "table5", false },
-        { "table6", false },
+        { "table1", new Item() {
+            cost = 0,
+            owned = true
+        }},
+        { "table2", new Item() {
+            cost = 100,
+            owned = false
+        }},
+        { "table3", new Item() {
+            cost = 150,
+            owned = false
+        }},
+        { "table4", new Item() {
+            cost = 200,
+            owned = false
+        }},
+        { "table5", new Item() {
+            cost = 250,
+            owned = false
+        }},
+        { "table6", new Item() {
+            cost = 300,
+            owned = false
+        }},
         // ovens
-        { "oven1", true },
-        { "oven2", false },
-        { "oven3", false },
-        { "oven4", false },
-        { "oven5", false },
-        { "oven6", false },
-        // recipes
-        { "americano", true },
-        { "bearlatte", false},
-        { "bubbletea", false},
-        { "cake", false},
-        { "muffin", false},
-        { "toast", false},
+        { "oven1", new Item() {
+            cost = 0,
+            owned = true
+        }},
+        { "oven2", new Item() {
+            cost = 200,
+            owned = false
+        }},
+        { "oven3", new Item() {
+            cost = 250,
+            owned = false
+        }},
+        { "oven4", new Item() {
+            cost = 300,
+            owned = false
+        }},
+        { "oven5", new Item() {
+            cost = 350,
+            owned = false
+        }},
+        { "oven6", new Item() {
+            cost = 400,
+            owned = false
+        }},
         // decor
         // wallhangings
-        { "clock", false},
-        { "lights", false},
-        { "painting", false},
-        { "wallhanging", false},
+        { "clock", new Item() {
+            cost = 0,
+            owned = true
+        }},
+        { "lights", new Item() {
+            cost = 100,
+            owned = false
+        }},
+        { "painting", new Item() {
+            cost = 200,
+            owned = false
+        }},
+        { "wallhanging", new Item() {
+            cost = 300,
+            owned = false
+        }},
         // windows
-        { "archedwindow", false},
-        { "heartwindow", false}
+        { "window", new Item() {
+            cost = 0,
+            owned = true
+        }},
+        { "archedwindow", new Item() {
+            cost = 400,
+            owned = false
+        }},
+        { "heartwindow", new Item() {
+            cost = 500,
+            owned = false
+        }}
     };
+
+    public Dictionary<string, Recipe> recipes = new Dictionary<string, Recipe>()
+    {
+        { "americano", new Recipe() {
+            cost = 0,
+            owned = true,
+            cookTime = 5,
+            earnings = 10
+        }},
+        { "bearlatte", new Recipe() {
+            cost = 500,
+            owned = false,
+            cookTime = 10,
+            earnings = 20
+        }},
+        { "bubbletea", new Recipe() {
+            cost = 400,
+            owned = false,
+            cookTime = 7,
+            earnings = 15
+        }},
+        { "cake", new Recipe() {
+            cost = 500,
+            owned = false,
+            cookTime = 10,
+            earnings = 20
+        }},
+        { "muffin", new Recipe() {
+            cost = 400,
+            owned = false,
+            cookTime = 7,
+            earnings = 15
+        }},
+        { "toast", new Recipe() {
+            cost = 0,
+            owned = true,
+            cookTime = 5,
+            earnings = 10
+        }},
+    }; 
 
     public Dictionary<string, int> customers = new Dictionary<string, int>() 
     {
