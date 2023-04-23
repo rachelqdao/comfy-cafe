@@ -7342,7 +7342,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &477232945
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10108,6 +10108,16 @@ Transform:
   m_Father: {fileID: 570606447}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &752739614 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2105745170467967241, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+  m_PrefabInstance: {fileID: 915435723}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &752739616 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2105745170467967243, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+  m_PrefabInstance: {fileID: 915435723}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &766267109
 GameObject:
   m_ObjectHideFlags: 0
@@ -10921,11 +10931,11 @@ PrefabInstance:
     - target: {fileID: 3061858250747364171, guid: cf70e6882efa78843946e556670ecb63, type: 3}
       propertyPath: recipe
       value: 
-      objectReference: {fileID: 681150087}
+      objectReference: {fileID: 2139755164}
     - target: {fileID: 3061858250747364171, guid: cf70e6882efa78843946e556670ecb63, type: 3}
       propertyPath: recipeSpriteRenderer
       value: 
-      objectReference: {fileID: 681150089}
+      objectReference: {fileID: 2139755166}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf70e6882efa78843946e556670ecb63, type: 3}
 --- !u!1 &803972073
@@ -12882,11 +12892,11 @@ PrefabInstance:
     - target: {fileID: 3061858250747364171, guid: cf70e6882efa78843946e556670ecb63, type: 3}
       propertyPath: recipe
       value: 
-      objectReference: {fileID: 598951778}
+      objectReference: {fileID: 752739614}
     - target: {fileID: 3061858250747364171, guid: cf70e6882efa78843946e556670ecb63, type: 3}
       propertyPath: recipeSpriteRenderer
       value: 
-      objectReference: {fileID: 598951780}
+      objectReference: {fileID: 752739616}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf70e6882efa78843946e556670ecb63, type: 3}
 --- !u!1 &918949116
@@ -16113,6 +16123,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1132294578}
   m_CullTransparentMesh: 1
+--- !u!1 &1140488937 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2105745170467967241, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+  m_PrefabInstance: {fileID: 1964519010}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1140488939 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2105745170467967243, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+  m_PrefabInstance: {fileID: 1964519010}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1157364816
 GameObject:
   m_ObjectHideFlags: 0
@@ -16902,8 +16922,8 @@ GameObject:
   - component: {fileID: 1191417986}
   - component: {fileID: 1191417987}
   m_Layer: 5
-  m_Name: shoppanel (1)
-  m_TagString: Untagged
+  m_Name: RecipesPanel
+  m_TagString: RecipesPanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18452,8 +18472,8 @@ GameObject:
   - component: {fileID: 1343307052}
   - component: {fileID: 1343307053}
   m_Layer: 5
-  m_Name: shoppanel (1)
-  m_TagString: Untagged
+  m_Name: DecorationsPanel
+  m_TagString: DecorationsPanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20488,6 +20508,9 @@ MonoBehaviour:
   facilitiesTab: {fileID: 974210934}
   recipesTab: {fileID: 329466786}
   decorationsTab: {fileID: 443636074}
+  facilitiesPanel: {fileID: 1888141991}
+  recipesPanel: {fileID: 1191417985}
+  decorationsPanel: {fileID: 1343307051}
 --- !u!1 &1505047086
 GameObject:
   m_ObjectHideFlags: 0
@@ -22476,7 +22499,7 @@ RectTransform:
   m_Children:
   - {fileID: 1837186965}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -23219,11 +23242,11 @@ PrefabInstance:
     - target: {fileID: 3061858250747364171, guid: cf70e6882efa78843946e556670ecb63, type: 3}
       propertyPath: recipe
       value: 
-      objectReference: {fileID: 1327704302}
+      objectReference: {fileID: 1816890126}
     - target: {fileID: 3061858250747364171, guid: cf70e6882efa78843946e556670ecb63, type: 3}
       propertyPath: recipeSpriteRenderer
       value: 
-      objectReference: {fileID: 1327704304}
+      objectReference: {fileID: 1816890128}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf70e6882efa78843946e556670ecb63, type: 3}
 --- !u!1 &1707510628
@@ -24437,11 +24460,11 @@ PrefabInstance:
     - target: {fileID: 3061858250747364171, guid: cf70e6882efa78843946e556670ecb63, type: 3}
       propertyPath: recipe
       value: 
-      objectReference: {fileID: 280337056}
+      objectReference: {fileID: 1140488937}
     - target: {fileID: 3061858250747364171, guid: cf70e6882efa78843946e556670ecb63, type: 3}
       propertyPath: recipeSpriteRenderer
       value: 
-      objectReference: {fileID: 280337058}
+      objectReference: {fileID: 1140488939}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf70e6882efa78843946e556670ecb63, type: 3}
 --- !u!1 &1770677528
@@ -25078,7 +25101,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1807274064
 Transform:
   m_ObjectHideFlags: 0
@@ -25109,6 +25132,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popUpManager: {fileID: 0}
   customerClosenessPanel: {fileID: 2006655107}
+--- !u!1 &1816890126 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2105745170467967241, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+  m_PrefabInstance: {fileID: 1703913295}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1816890128 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2105745170467967243, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+  m_PrefabInstance: {fileID: 1703913295}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1825202236
 GameObject:
   m_ObjectHideFlags: 0
@@ -26094,8 +26127,8 @@ GameObject:
   - component: {fileID: 1888141992}
   - component: {fileID: 1888141993}
   m_Layer: 5
-  m_Name: shoppanel
-  m_TagString: Untagged
+  m_Name: FacilitiesPanel
+  m_TagString: FacilitiesPanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27641,11 +27674,11 @@ PrefabInstance:
     - target: {fileID: 3061858250747364171, guid: cf70e6882efa78843946e556670ecb63, type: 3}
       propertyPath: recipe
       value: 
-      objectReference: {fileID: 736764467}
+      objectReference: {fileID: 1140488937}
     - target: {fileID: 3061858250747364171, guid: cf70e6882efa78843946e556670ecb63, type: 3}
       propertyPath: recipeSpriteRenderer
       value: 
-      objectReference: {fileID: 736764469}
+      objectReference: {fileID: 1140488939}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf70e6882efa78843946e556670ecb63, type: 3}
 --- !u!1 &1965603051
@@ -29766,3 +29799,13 @@ Canvas:
   m_SortingLayerID: 1680665929
   m_SortingOrder: 1
   m_TargetDisplay: 0
+--- !u!1 &2139755164 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2105745170467967241, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+  m_PrefabInstance: {fileID: 790094350}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &2139755166 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2105745170467967243, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+  m_PrefabInstance: {fileID: 790094350}
+  m_PrefabAsset: {fileID: 0}

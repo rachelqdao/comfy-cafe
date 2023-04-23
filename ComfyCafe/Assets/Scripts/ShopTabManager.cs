@@ -18,21 +18,40 @@ public class ShopTabManager : MonoBehaviour
     private Image recipesTabImage;
     private Image decorationsTabImage;
 
+    public GameObject facilitiesPanel;
+    public GameObject recipesPanel;
+    public GameObject decorationsPanel;
+
     // Start is called before the first frame update
     void Start()
-    {
+    {   
+        // Get refs to all the tab images
         facilitiesTabImage = facilitiesTab.GetComponent<Image>();
         recipesTabImage = recipesTab.GetComponent<Image>();
         decorationsTabImage = decorationsTab.GetComponent<Image>();
+
+        // Get refs to the individual shop panels
+        /*
+        facilitiesPanel = GameObject.FindGameObjectWithTag("FacilitiesPanel");
+        recipesPanel = GameObject.FindGameObjectWithTag("RecipesPanel");
+        decorationsPanel = GameObject.FindGameObjectWithTag("DecorationsPanel");
+        */
 
         // Open shop to facilities tab on start
         isFacilitiesOpen = true;
         isRecipesOpen = false;
         isDecorationsOpen = false;
 
+
+        /*
+        // Show proper tabs
         facilitiesTabImage.color = Color.white;
         recipesTabImage.color = Color.gray;
         decorationsTabImage.color = Color.gray;
+
+        // Show proper panels
+        facilitiesPanel.SetActive();
+        */
     }
 
     // Update is called once per frame
@@ -42,14 +61,28 @@ public class ShopTabManager : MonoBehaviour
             facilitiesTabImage.color = Color.white;
             recipesTabImage.color = Color.gray;
             decorationsTabImage.color = Color.gray;
+
+            facilitiesPanel.SetActive(true);
+            recipesPanel.SetActive(false);
+            decorationsPanel.SetActive(false);
+            
         } else if (isRecipesOpen == true) {
             facilitiesTabImage.color = Color.gray;
             recipesTabImage.color = Color.white;
             decorationsTabImage.color = Color.gray;
+
+            facilitiesPanel.SetActive(false);
+            recipesPanel.SetActive(true);
+            decorationsPanel.SetActive(false);
+
         } else if (isDecorationsOpen == true) {
             facilitiesTabImage.color = Color.gray;
             recipesTabImage.color = Color.gray;
             decorationsTabImage.color = Color.white;
+
+            facilitiesPanel.SetActive(false);
+            recipesPanel.SetActive(false);
+            decorationsPanel.SetActive(true);
         }
     }
 

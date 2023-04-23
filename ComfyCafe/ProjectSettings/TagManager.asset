@@ -20,6 +20,9 @@ TagManager:
   - Table6
   - OrderManager
   - CurrencyManager
+  - DecorationsPanel
+  - RecipesPanel
+  - FacilitiesPanel
   layers:
   - Default
   - TransparentFX
