@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+
 using System;
 using System.IO;
 using TMPro;
@@ -21,14 +23,21 @@ public class FacilitiesPanelManager : MonoBehaviour
     public bool[] ownedTables;
     public int clickedButtonIndex;
 
+    public CurrencyManager currencyManager;
+
     // Start is called before the first frame update
     void Start()
     {
         SerializeJson();
 
-        // read data to get owned tables
+        // Get reference to CurrencyManager script
+        currencyManager = GameObject.FindGameObjectWithTag("CurrencyManager").GetComponent<CurrencyManager>();
+
+        // Read data to get owned tables
         ownedTables = new bool[6];
         getOwnedTables();
+
+        // Configure buttons
         addTableButtonListeners();
         disableButtons();
     }
@@ -94,17 +103,34 @@ public class FacilitiesPanelManager : MonoBehaviour
     }
 
     public void buyTable(int i) {
-        string tableName = "table" + i;
+        int j = i + 1;
+        string tableName = "table" + j;
         Debug.Log("Table name: " + tableName);
         
-        // subtract money from balance if enough money
+
+        // Check if enought money
+        if (data.coins > data.items[tableName].cost) {
+            // subtract money from balance if enough money
 
             // write the new balance back to json
+            currencyManager.subtractCoins(data.items[tableName].cost);
 
             // gray out the button
+            tableButtons[i].interactable = false;
 
-            // pass stuff to table manager to show up in restaurant
+            // pass stuff to table manager to show up in restaurant?
 
+            string tokenPath = "items." + tableName + ".owned";
+            
+            string path = Application.persistentDataPath + "/playerData.json";
+            string json = File.ReadAllText(path);
+            JObject jObject = JsonConvert.DeserializeObject(json) as JObject;
+            JToken jToken = jObject.SelectToken(tokenPath);
+            jToken.Replace(true);
+            string updatedJsonString = jObject.ToString();
+            File.WriteAllText(path, updatedJsonString);
+            SerializeJson();
+        }       
     }
 
     public void SerializeJson() {

@@ -59,7 +59,7 @@ public class CustomerScript : MonoBehaviour
         orderManager = GameObject.FindGameObjectWithTag("OrderManager").GetComponent<OrderManager>();
 
 
-        // Get reference to OrderManager script
+        // Get reference to CurrencyManager script
         currencyManager = GameObject.FindGameObjectWithTag("CurrencyManager").GetComponent<CurrencyManager>();
 
         // Get all the path waypoints
