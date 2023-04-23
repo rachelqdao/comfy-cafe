@@ -13,6 +13,11 @@ TagManager:
   - Queue
   - SpeechBubble
   - UI
+  - Table2
+  - Table3
+  - Table4
+  - Table5
+  - Table6
   layers:
   - Default
   - TransparentFX

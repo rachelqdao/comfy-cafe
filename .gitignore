@@ -2,7 +2,21 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
-/ComfyCafe/Library/
+
+/ComfyCafe/Library/APIUpdater/
+/ComfyCafe/Library/Artifacts/
+/ComfyCafe/Library/ArtifactDB
+/ComfyCafe/Library/Bee/
+/ComfyCafe/Library/BuildPlayerData/
+/ComfyCafe/Library/BurstCache/
+/ComfyCafe/Library/PackageCache/
+/ComfyCafe/Library/PackageManager/
+/ComfyCafe/Library/PlayerDataCache/
+/ComfyCafe/Library/ScriptAssemblies/
+/ComfyCafe/Library/ShaderCache/
+/ComfyCafe/Library/StateCache/
+/ComfyCafe/Library/TempArtifacts/
+/ComfyCafe/Library/UIElements/
 /ComfyCafe/Temp/
 /ComfyCafe/Obj/
 /ComfyCafe/Build/
