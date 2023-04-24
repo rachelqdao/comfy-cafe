@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class PlayerData
 {
     public int playerID = 12345;
-    public int coins = 1000;
+    public int coins = 500;
     public int diamonds = 10;
 
     public Dictionary<string, string> currentItems = new Dictionary<string, string>()
