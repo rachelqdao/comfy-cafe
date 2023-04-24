@@ -71,10 +71,27 @@ public class CustomerScript : MonoBehaviour
         customerClosenessManager = GameObject.FindGameObjectWithTag("CustomerClosenessManager").GetComponent<CustomerClosenessManager>();
 
         // Get all the path waypoints
-        path = GameObject.FindGameObjectsWithTag("Path");
+        path = new GameObject[11];
+        path[0] = GameObject.FindGameObjectWithTag("Path1");
+        path[1] = GameObject.FindGameObjectWithTag("Path2");
+        path[2] = GameObject.FindGameObjectWithTag("Path3");
+        path[3] = GameObject.FindGameObjectWithTag("Path4");
+        path[4] = GameObject.FindGameObjectWithTag("Path5");
+        path[5] = GameObject.FindGameObjectWithTag("Path6");
+        path[6] = GameObject.FindGameObjectWithTag("Path7");
+        path[7] = GameObject.FindGameObjectWithTag("Path8");
+        path[8] = GameObject.FindGameObjectWithTag("Path9");
+        path[9] = GameObject.FindGameObjectWithTag("Path10");
+        path[10] = GameObject.FindGameObjectWithTag("Path11");
 
         // Get all the queue waypoints
-        queue = GameObject.FindGameObjectsWithTag("Queue"); 
+        queue = new GameObject[5];
+        queue[0] = GameObject.FindGameObjectWithTag("Queue1"); 
+        queue[1] = GameObject.FindGameObjectWithTag("Queue2"); 
+        queue[2] = GameObject.FindGameObjectWithTag("Queue3"); 
+        queue[3] = GameObject.FindGameObjectWithTag("Queue4"); 
+        queue[4] = GameObject.FindGameObjectWithTag("Queue5"); 
+
 
         GameObject[] table1Path = new GameObject[] {path[0], path[1], path[2]};
         GameObject[] table2Path = new GameObject[] {path[0], path[1], path[3]};
