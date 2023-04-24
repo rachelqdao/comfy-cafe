@@ -17784,9 +17784,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Table 5
-
-'
+  m_text: Table 6
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 137be594149f0b8419ec487f7b7a5f66, type: 2}
   m_sharedMaterial: {fileID: -9151209115352505173, guid: 137be594149f0b8419ec487f7b7a5f66, type: 2}
