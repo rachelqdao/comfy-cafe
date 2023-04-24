@@ -35,10 +35,10 @@ public class SpriteLoader : MonoBehaviour
                 diamondBalance.SetText(data.diamonds.ToString());
                 // check and render sprite for certain item types
                 // window
-                windowSR.sprite = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sprites/" + data.currentItems["window"] + ".png");
+                windowSR.sprite = Resources.Load<Sprite>(data.currentItems["window"]);
                 Debug.Log("Assets/Sprites/" + data.currentItems["window"] + ".png");
                 // wallhangings 
-                wallhangingSR.sprite = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sprites/" + data.currentItems["wallhanging"] + ".png");
+                wallhangingSR.sprite = Resources.Load<Sprite>(data.currentItems["wallhanging"]);
                 // can be converted to allow different table and oven variants in the future
                 // tables
                 /*

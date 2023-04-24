@@ -193,7 +193,7 @@ public class DecorationPanelManager : MonoBehaviour
             string path = Application.persistentDataPath + "/playerData.json";
             string json = File.ReadAllText(path);
             JObject jObject = JsonConvert.DeserializeObject(json) as JObject;
-            wallhangingSR.sprite = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sprites/" + wallhangingName + ".png");
+            wallhangingSR.sprite = Resources.Load<Sprite>(wallhangingName);
             string tokenPath = "currentItems.wallhanging";
             JToken jToken = jObject.SelectToken(tokenPath);
             jToken.Replace(wallhangingName);
@@ -265,7 +265,7 @@ public class DecorationPanelManager : MonoBehaviour
             string path = Application.persistentDataPath + "/playerData.json";
             string json = File.ReadAllText(path);
             JObject jObject = JsonConvert.DeserializeObject(json) as JObject;
-            windowSR.sprite = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sprites/" + windowName + ".png");
+            windowSR.sprite = Resources.Load<Sprite>(windowName);
             string tokenPath = "currentItems.window";
             JToken jToken = jObject.SelectToken(tokenPath);
             jToken.Replace(windowName);

@@ -40,7 +40,7 @@ public class TableScript : MonoBehaviour
 
     public void displayFood(string recipeName) {
         // render the sprite
-        recipeSpriteRenderer.sprite = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sprites/" + recipeName + ".png");
+        recipeSpriteRenderer.sprite = Resources.Load<Sprite>(recipeName);
         // set the food to be active
         recipe.SetActive(true);
     }
