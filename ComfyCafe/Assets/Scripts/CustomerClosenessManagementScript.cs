@@ -24,11 +24,4 @@ public class CustomerClosenessManagementScript : MonoBehaviour
         }
     }
 
-    public void customerNavBarOnClick() {
-
-    }
-
-    public void xButtonOnClick () {
-
-    }
 }

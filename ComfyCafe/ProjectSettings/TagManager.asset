@@ -26,6 +26,7 @@ TagManager:
   - TablePanelCanvas
   - TablePanelCoin
   - TablePanelCost
+  - CustomerClosenessManager
   layers:
   - Default
   - TransparentFX

@@ -30,12 +30,15 @@ public class CustomerScript : MonoBehaviour
     public OrderManager orderManager;
     public string recipe;
 
-    // customer friendship management
-    public GameObject[] customerPanels;
-
     // currency management
     public CurrencyManager currencyManager;
-    
+    bool coinsAdded = false;
+
+    // customer closeness management
+    public CustomerClosenessManager customerClosenessManager;
+    int customerID;
+    bool heartsAdded = false;
+
     // pathing
     int pathIndex = 0;
     public GameObject[] path;
@@ -50,7 +53,6 @@ public class CustomerScript : MonoBehaviour
     bool finishedMovingToCenterFromTable = false;
     bool finishedLeaveRestaurant = false;
 
-    bool coinsAdded = false;
 
     // Start is called before the first frame update
     void Start()
@@ -62,9 +64,11 @@ public class CustomerScript : MonoBehaviour
         // Get reference to OrderManager script
         orderManager = GameObject.FindGameObjectWithTag("OrderManager").GetComponent<OrderManager>();
 
-
         // Get reference to CurrencyManager script
         currencyManager = GameObject.FindGameObjectWithTag("CurrencyManager").GetComponent<CurrencyManager>();
+        
+        // Get reference to CurrencyManager script
+        customerClosenessManager = GameObject.FindGameObjectWithTag("CustomerClosenessManager").GetComponent<CustomerClosenessManager>();
 
         // Get all the path waypoints
         path = GameObject.FindGameObjectsWithTag("Path");
@@ -91,8 +95,8 @@ public class CustomerScript : MonoBehaviour
         }
 
         // Generate a random sprite for the customer
-        int customerSpriteID = UnityEngine.Random.Range(0, 7);
-        spriteRenderer.sprite = spriteArray[customerSpriteID];
+        customerID = UnityEngine.Random.Range(0, 7);
+        spriteRenderer.sprite = spriteArray[customerID];
 
         // TODO: Generate a random food for the customer
         string[] ownedRecipes = orderManager.getOwnedRecipes();
@@ -217,6 +221,7 @@ public class CustomerScript : MonoBehaviour
                 // Debug.Log("Cost of " + recipe + ": " + orderManager.getRecipeEarnings(recipe));
                 
                 addToCoinBalance();
+                addHeartToCustomer();
                 tableScript.hideFood();
                 finishedEating = true;
 
@@ -229,6 +234,13 @@ public class CustomerScript : MonoBehaviour
         if (finishedEating == true && coinsAdded == false) {
             coinsAdded = true;
             currencyManager.addCoins(orderManager.getRecipeEarnings(recipe));
+        }
+    }
+
+    public void addHeartToCustomer() {
+        if (finishedEating == true && heartsAdded == false) {
+            heartsAdded = true;
+            customerClosenessManager.addHeart(customerID);
         }
     }
 

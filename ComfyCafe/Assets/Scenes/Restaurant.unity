@@ -4730,7 +4730,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &329466785
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4947,7 +4947,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &359344936
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7330,7 +7330,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &443636073
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12753,6 +12753,66 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf70e6882efa78843946e556670ecb63, type: 3}
+--- !u!1 &803553736
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 803553738}
+  - component: {fileID: 803553737}
+  m_Layer: 0
+  m_Name: CustomerClosenessManager
+  m_TagString: CustomerClosenessManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &803553737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803553736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4749444cd73ae9b40812f8291173e8ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  customerPanels:
+  - {fileID: 495662710}
+  - {fileID: 876958278}
+  - {fileID: 701295364}
+  - {fileID: 1975356011}
+  - {fileID: 591912634}
+  - {fileID: 1793401636}
+  - {fileID: 131360375}
+  customerNames:
+  - shiba
+  - havanese
+  - rilakkuma
+  - korilakkuma
+  - bunny
+  - calico
+  - panda
+--- !u!4 &803553738
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803553736}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.856631, y: 0.50907296, z: -0.023679897}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &803972073
 GameObject:
   m_ObjectHideFlags: 0
@@ -22737,7 +22797,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1446957750
 GameObject:
@@ -24837,7 +24897,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1598336277
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25725,7 +25785,7 @@ RectTransform:
   m_Children:
   - {fileID: 1837186965}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -32159,6 +32219,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2006655108}
   - component: {fileID: 2006655109}
+  - component: {fileID: 2006655110}
   m_Layer: 0
   m_Name: customerpanel
   m_TagString: Untagged
@@ -32240,6 +32301,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2006655110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2006655107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4749444cd73ae9b40812f8291173e8ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  customerPanels: []
+  customerNames:
+  - shiba
+  - havanese
+  - rilakkuma
+  - korilakkuma
+  - bunny
+  - calico
+  - panda
 --- !u!1 &2020233764
 GameObject:
   m_ObjectHideFlags: 0
