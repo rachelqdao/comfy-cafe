@@ -5,26 +5,14 @@ using System.Collections.Generic;
 public class PlayerData
 {
     public int playerID = 12345;
-    public int coins = 1000;
+    public int coins = 500;
     public int diamonds = 10;
 
     public Dictionary<string, string> currentItems = new Dictionary<string, string>()
     {
         // itemType : selectedItem
         { "window", "window" },
-        { "wallhanging", "clock" },
-        { "table1", "table" },
-        { "table2", "" },
-        { "table3", "" },
-        { "table4", "" },
-        { "table5", "" },
-        { "table6", "" },
-        { "oven1", "oven" },
-        { "oven2", "" },
-        { "oven3", "" },
-        { "oven4", "" },
-        { "oven5", "" },
-        { "oven6", "" }
+        { "wallhanging", "clock" }
     };
 
     public Dictionary<string, Item> items = new Dictionary<string, Item>()

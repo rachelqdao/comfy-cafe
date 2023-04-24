@@ -123,7 +123,7 @@ public class FacilitiesPanelManager : MonoBehaviour
         
         SerializeJson();
         // Check if enought money
-        if (data.coins > data.items[tableName].cost) {
+        if (data.coins >= data.items[tableName].cost) {
             // subtract money from balance if enough money
 
             // write the new balance back to json
