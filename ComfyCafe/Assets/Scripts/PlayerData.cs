@@ -12,19 +12,7 @@ public class PlayerData
     {
         // itemType : selectedItem
         { "window", "window" },
-        { "wallhanging", "clock" },
-        { "table1", "table" },
-        { "table2", "" },
-        { "table3", "" },
-        { "table4", "" },
-        { "table5", "" },
-        { "table6", "" },
-        { "oven1", "oven" },
-        { "oven2", "" },
-        { "oven3", "" },
-        { "oven4", "" },
-        { "oven5", "" },
-        { "oven6", "" }
+        { "wallhanging", "clock" }
     };
 
     public Dictionary<string, Item> items = new Dictionary<string, Item>()

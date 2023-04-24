@@ -107,7 +107,7 @@ public class RecipesPanelManager : MonoBehaviour
         Debug.Log("Bought recipe: " + recipes[i]);
 
         SerializeJson();
-        if (data.coins > data.recipes[recipes[i]].cost) {
+        if (data.coins >= data.recipes[recipes[i]].cost) {
 
             // subtract coins
             currencyManager.subtractCoins(data.recipes[recipes[i]].cost);
